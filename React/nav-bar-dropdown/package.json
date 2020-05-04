@@ -1,0 +1,20 @@
+{
+  "name": "nav-bar-dropdown",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Adebiyi Adedotun",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel ./public/index.html"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "parcel-bundler": "^1.12.4"
+  }
+}

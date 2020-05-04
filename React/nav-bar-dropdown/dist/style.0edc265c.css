@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+}
+
+#app {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  background-color: #e3e8ee;
+  min-width: 1024px;
+  position: relative;
+  padding-left: calc(50vw - 695px);
+}
+
+.nav {
+  padding-top: 68px;
+  padding-left: 20px;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.nav-items__wrap:first-of-type {
+  margin-bottom: 30px;
+}
+
+.nav-items__wrap:nth-of-type(8) {
+  margin: 30px 0;
+}
+
+.nav-items__wrap,
+.nav-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-items {
+  height: 0;
+  overflow: hidden;
+  padding-left: 34px;
+  transition: height 0.25s ease-in-out;
+}
+
+.nav-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.nav-item__heading {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 4px;
+}
+
+.nav-item__heading .ref {
+  margin-left: 10px;
+}
+
+.nav-item__heading .ref,
+.nav-item__heading svg {
+  pointer-events: none;
+}
+
+.nav-item__heading .ref::first-letter,
+.nav-item::first-letter {
+  text-transform: uppercase;
+}
+
+.nav-item__heading,
+.nav-item {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-item {
+  padding: 4px;
+}
+
+a:hover {
+  color: #535659;
+}
+
+.content-wrap {
+  padding-left: 240px;
+  height: 100vh;
+  width: 100%;
+}
+
+.inner-content {
+  max-width: 1092px;
+  min-width: 760px;
+  width: calc(100vw - 302px);
+  padding-bottom: 48px;
+  padding-top: 68px;
+  height: 100vh;
+  position: relative;
+}
+
+.content {
+  background-color: white;
+  height: 100%;
+  padding: 20px;
+}
+
+/* markers */
+.nav-item {
+  position: relative;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: black;
+  left: -6px;
+}
+
+
+/*# sourceMappingURL=/style.0edc265c.css.map */
