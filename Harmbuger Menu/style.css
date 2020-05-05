@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #222;
+}
+
+.menuBlock {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: 0.2s ease-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu {
+  --width: 400px;
+  width: var(--width);
+  height: 100%;
+  background-color: wheat;
+  margin-left: auto;
+  transform: translateX(var(--width));
+  /* By default it is visually hidden and transformed out */
+  visibility: hidden;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0s linear 0.25s;
+}
+
+.active {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.active > .menu {
+  visibility: visible;
+  transform: translateX(0);
+  transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s;
+}
+
+#close {
+  visibility: visible;
+}

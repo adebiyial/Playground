@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Harmbuger Menu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="open">open menu</button>
+    <div class="menuBlock hidden">
+      <div class="menu">
+        <button id="close">close menu</button>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const openBtn = document.getElementById("open");
+    const menuBlock = document.querySelector(".menuBlock");
+    const menu = menuBlock.querySelector(".menu");
+    const closeBtn = menu.querySelector("#close");
+
+    function toggleMenuActive() {
+      menuBlock.classList.toggle("active");
+    }
+
+    openBtn.addEventListener("click", toggleMenuActive);
+    closeBtn.addEventListener("click", toggleMenuActive);
+  </script>
+</html>
