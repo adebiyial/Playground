@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paystack Pricing Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="pricing">
+      <div class="container">
+        <div class="section-canvas">
+          <div class="section-intro">
+            <h1 class="section-intro__heading">
+              Do the math
+            </h1>
+            <p class="section-intro__summary">
+              See how much it costs to use Paystack. Enter an amount into the
+              calculator to see our charges.
+            </p>
+          </div>
+          <div class="section-body">
+            <div class="pricing-calculator__outerBox">
+              <div class="pricing-calculator__innerBox">
+                <div class="pricing-calculator__inputBlock">
+                  <label for="pricing-input" class="pricing-label"
+                    >IF YOUR CUSTOMER PAYS</label
+                  >
+                  <div class="pricing-input__wrap">
+                    <span class="currency">NGN</span>
+                    <input
+                      type="text"
+                      name="pricing-input"
+                      id="pricing-input"
+                      class="pricing-input"
+                      pattern="[0-9]{5}"
+                      maxlength="7"
+                      onkeypress="return event.charCode > 47 && event.charCode < 58;"
+                    />
+                  </div>
+                </div>
+                <div class="pricing-calculator__calc">
+                  <div class="pricing-calculator_customerFees">
+                    <span class="calc-label">WE'LL SETTLE YOU</span>
+                    <h1 class="calc-result">
+                      <span class="currency">NGN </span>
+                      <span class="fees">
+                        0.00
+                      </span>
+                    </h1>
+                  </div>
+                  <div class="pricing-calculator_paystackFees">
+                    <span class="calc-label">PAYSTACK FEES (1.5% + N100)</span>
+                    <h1 class="calc-result">
+                      <span class="currency">NGN </span>
+                      <span class="fees">
+                        0.00
+                      </span>
+                    </h1>
+                  </div>
+                </div>
+                <ul class="pricing-calculator__benefits">
+                  <li class="pricing-calculator__benefit">
+                    Free, automatic settlement within 24 hours
+                    <img src="./check.svg" alt="check mark" />
+                  </li>
+                  <li class="pricing-calculator__benefit">
+                    Local fees capped at NGN 2,000
+                    <img src="./check.svg" alt="check mark" />
+                  </li>
+                  <li class="pricing-calculator__benefit">
+                    Volume discounts available
+                    <img src="./check.svg" alt="check mark" />
+                  </li>
+                  <li class="pricing-calculator__benefit">
+                    No hidden fees or charges
+                    <img src="./check.svg" alt="check mark" />
+                  </li>
+                  <li class="pricing-calculator__benefit">
+                    Zero integration fee
+                    <img src="./check.svg" alt="check mark" />
+                  </li>
+                  <li class="pricing-calculator__benefit">
+                    Zero maintenance fee
+                    <img src="./check.svg" alt="check mark" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script>
+    const priceInput = document.getElementById("pricing-input");
+    const f = document.getElementById("f");
+
+    // priceInput.value = 2000;
+
+    const [customerFeesEl, paystackFeesEl] = document.querySelectorAll(".fees");
+
+    function calculateFees(basePrice) {
+      const paystackFees = (1.5 * basePrice) / 100;
+      const customerFees = basePrice - paystackFees;
+
+      return {customerFees, paystackFees};
+    }
+
+    function formatPrice(price) {
+      // return parseInt(price.toLocaleString());
+      return price.toLocaleString();
+    }
+
+    priceInput.addEventListener("keyup", e => {
+      const {customerFees, paystackFees} = calculateFees(e.target.value);
+      console.log({customerFees, paystackFees});
+
+      customerFeesEl.innerHTML = customerFees.toFixed(2);
+      paystackFeesEl.innerHTML = paystackFees.toFixed(2);
+    });
+  </script>
+</html>
