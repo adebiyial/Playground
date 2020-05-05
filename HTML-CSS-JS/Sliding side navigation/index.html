@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button>show/hide</button>
+    <div class="menu">
+      <div class="first"></div>
+      <div class="second"></div>
+    </div>
+  </body>
+
+  <script>
+    const btn = document.querySelector("button");
+    const first = document.querySelector(".first");
+    const second = document.querySelector(".second");
+
+    btn.addEventListener("click", () => {
+      first.classList.toggle("show");
+      second.classList.toggle("show");
+    });
+  </script>
+</html>
