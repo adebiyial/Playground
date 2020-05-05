@@ -1,1 +1,1 @@
-![](hgb-menu.gif)
+![Screenshot](./hbg-menu.gif "Screenshot")
