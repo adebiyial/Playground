@@ -93,7 +93,7 @@ function App() {
               <br />
               <br />
               This can be done with the HTML input checkbox trick but what makes
-              this special is that the dropdown transition in and out.
+              this special is that the use-case.
               <br />
               <br />
               <br />

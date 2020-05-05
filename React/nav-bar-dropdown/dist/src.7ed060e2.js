@@ -28720,7 +28720,7 @@ function App() {
     className: "inner-content"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "content"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "What's this?"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("p", null, "This is about Stripe's dashboard. I draw a lot of inspiration from there.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "The goal here is to build the navigation bar to the left and animate the items with children (e.g Payments)", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "This can be done with the HTML input checkbox trick but what makes this special is that the dropdown transition in and out.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "This means we have to dynamically calculate the height of each dropdown.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "Made with \u2764\uFE0F\u2764\uFE0F by", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "What's this?"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("p", null, "This is about Stripe's dashboard. I draw a lot of inspiration from there.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "The goal here is to build the navigation bar to the left and animate the items with children (e.g Payments)", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "This can be done with the HTML input checkbox trick but what makes this special is that the use-case.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "This means we have to dynamically calculate the height of each dropdown.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "Made with \u2764\uFE0F\u2764\uFE0F by", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("a", {
     href: "https://twitter.com/adebiyial"
   }, "Adebiyi Adedotun"))))));
 }
@@ -28754,7 +28754,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56600" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52748" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
