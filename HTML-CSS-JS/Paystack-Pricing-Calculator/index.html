@@ -43,7 +43,6 @@
                   <div class="pricing-calculator_customerFees">
                     <span class="calc-label">WE'LL SETTLE YOU</span>
                     <h1 class="calc-result">
-                      <span class="currency">NGN </span>
                       <span class="fees">
                         0.00
                       </span>
@@ -52,7 +51,6 @@
                   <div class="pricing-calculator_paystackFees">
                     <span class="calc-label">PAYSTACK FEES (1.5% + N100)</span>
                     <h1 class="calc-result">
-                      <span class="currency">NGN </span>
                       <span class="fees">
                         0.00
                       </span>
@@ -94,31 +92,42 @@
   </body>
 
   <script>
-    const priceInput = document.getElementById("pricing-input");
-    const f = document.getElementById("f");
-
-    // priceInput.value = 2000;
-
+    // Calculate fees and it's DOM deps.
     const [customerFeesEl, paystackFeesEl] = document.querySelectorAll(".fees");
-
     function calculateFees(basePrice) {
       const paystackFees = (1.5 * basePrice) / 100;
       const customerFees = basePrice - paystackFees;
 
-      return {customerFees, paystackFees};
+      return {
+        customerFees: formatNumber().format(customerFees),
+        paystackFees: formatNumber().format(paystackFees),
+      };
     }
 
-    function formatPrice(price) {
-      // return parseInt(price.toLocaleString());
-      return price.toLocaleString();
+    // Add the Currency on page load
+    window.addEventListener("load", () => {
+      customerFeesEl.innerHTML = formatNumber().format(0);
+      paystackFeesEl.innerHTML = formatNumber().format(0);
+    });
+
+    // Format number...
+    function formatNumber() {
+      const naira = new Intl.NumberFormat("ng", {
+        style: "currency",
+        currency: "NGN",
+        minimumFractionDigits: 2,
+      });
+
+      return naira;
     }
 
-    priceInput.addEventListener("keyup", e => {
+    // When the user types...
+    const priceInput = document.getElementById("pricing-input");
+    priceInput.addEventListener("keyup", (e) => {
       const {customerFees, paystackFees} = calculateFees(e.target.value);
-      console.log({customerFees, paystackFees});
 
-      customerFeesEl.innerHTML = customerFees.toFixed(2);
-      paystackFeesEl.innerHTML = paystackFees.toFixed(2);
+      customerFeesEl.innerHTML = customerFees;
+      paystackFeesEl.innerHTML = paystackFees;
     });
   </script>
 </html>

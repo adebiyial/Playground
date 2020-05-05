@@ -102,6 +102,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 36px;
+  flex-wrap: wrap;
 }
 
 [class*="label"] {
@@ -137,4 +138,47 @@
 .pricing-calculator__benefit > img {
   width: 10px;
   height: 10px;
+}
+
+@media screen and (max-width: 980px) {
+  :root {
+    --section-grid-col: 1fr;
+  }
+
+  .section-intro {
+    margin-right: unset;
+  }
+
+  .section-intro__summary {
+    font-size: 20px;
+  }
+
+  .pricing-calculator__innerBox {
+    padding: 20px;
+  }
+
+  .pricing-input__wrap {
+    font-size: 25px;
+  }
+
+  .pricing-input__wrap > .currency {
+    padding: 20px 11px 20px;
+  }
+
+  .pricing-input {
+    padding: 10px 25px 10px 70px;
+  }
+
+  .pricing-calculator_customerFees {
+    margin-bottom: 10px;
+  }
+
+  .calc-result {
+    text-align: left;
+    font-size: 25px;
+  }
+
+  .pricing-calculator__benefit {
+    font-size: 15px;
+  }
 }
