@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: black;
+  background-color: #6587e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  height: 400px;
+  min-height: 400px;
+  width: 580px;
+  position: relative;
+}
+
+.pseudo {
+  width: 50%;
+  height: 50%;
+  transition: 0.3s;
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+  /* pointer-events: none; */
+}
+
+.top-left {
+  /* background-color: red; */
+  top: 0;
+  left: 0;
+}
+
+.top-left:hover ~ .card {
+  transform: perspective(600px) rotateX(10deg) rotateY(-10deg);
+}
+
+.top-right {
+  background-color: blue;
+  top: 0;
+  right: 0;
+}
+
+.top-right:hover ~ .card {
+  /* background-color: red; */
+  transform: perspective(600px) rotateX(10deg) rotateY(10deg);
+}
+
+.bottom-left {
+  background-color: rebeccapurple;
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-left:hover ~ .card {
+  transform: perspective(600px) rotateX(-10deg) rotateY(-10deg);
+}
+
+.bottom-right {
+  /* background-color: royalblue; */
+  bottom: 0;
+  right: 0;
+}
+
+.bottom-right:hover ~ .card {
+  transform: perspective(600px) rotateX(-10deg) rotateY(10deg);
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  border-radius: 8px;
+  padding: 80px 50px;
+  height: 100%;
+  transition: 0.2s ease-in;
+}
+
+.content header {
+  font-size: 53px;
+  line-height: 68px;
+  color: #32325d;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.content main {
+  font-size: 25px;
+  font-weight: 200;
+}
